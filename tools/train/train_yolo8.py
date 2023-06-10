@@ -64,8 +64,8 @@ with open(yaml_file, 'w') as f:
 
 cfg = f'''
 # copy_paste: 0.25
-mixup: 0.5
-mosaic: 0.5
+mixup: 0.25
+mosaic: 0.9
 flipud: 0.5
 degrees: 15
 '''
@@ -94,11 +94,9 @@ results = model.train(
     close_mosaic=0#int(args.epochs * 0.15),
 )
 
+oof_path = os.path.join(args.project, args.name, f"oof_fold{args.fold}.json")
 infer_yolo8(
     model, f"{dataset_path}/val/images",
-    os.path.join(args.project, args.name, f"oof_fold{args.fold}.json")
+    oof_path
 )
-
-if args.train_pseudo:
-    # Merge pseudo label to current yolo bboxes
-    
+print(f"OOF prediction of fold {args.fold} saved to {oof_path}")

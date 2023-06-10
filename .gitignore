@@ -4,7 +4,6 @@ __pycache__
 .DS_Store
 data/vasculature
 *.png
-*.csv
 *.jpg
 *.gif
 runs/
