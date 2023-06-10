@@ -1,6 +1,5 @@
-
-# copy_paste: 0.25
+copy_paste: 0.2
 mixup: 0.5
-mosaic: 0.5
+mosaic: 1.5
 flipud: 0.5
 degrees: 15
