@@ -1,0 +1,15 @@
+*.zip
+*surface_volume/
+__pycache__
+.DS_Store
+data/vasculature
+*.png
+*.csv
+*.jpg
+*.gif
+runs/
+*.pt
+*.pth
+datasets*/
+*.json
+*.npy
